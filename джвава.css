@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@1,900&family=Neucha&display=swap');
+
+*{
+    margin: 0px 0 0 ;
+    padding: 0px 0 0 0;
+    box-sizing: border-box;
+}
+.backraund{
+    min-height: 100vh;
+}
+/*--------------------Меню----------------------*/
+.fon{
+    background-color: #302b63;
+    width: 100%;
+    min-height: 110px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.fon .navigation{
+    right: 0%;
+}
+
+.navigation{
+    width: 400px;
+    height: 70px;
+    background: linear-gradient(105deg,#fffc00,#ffffff);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    top: 30px;
+    box-shadow: 0 5px 3px rgb(255, 217, 2);
+}
+.navigation ul{
+    display: flex;
+    width: 350px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.8em;
+    text-align: center;
+    transition: 0.5s;
+    color: rgb(7, 3, 10);
+}
+.navigation ul li.active a .icon{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text{
+    position: absolute;
+    text-decoration: none;
+    color: rgb(7, 3, 10);
+    font-weight: 500;
+    font-size: 1em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5ms;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.navigation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+.idetuficator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(75deg,#fffc00,#ffffff);
+    border: 7px solid #302b63;
+    transition: 0.5s;
+}
+.idetuficator:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 28px;
+    box-shadow: 0px -10px  #302b63;
+}
+.idetuficator:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 28px;
+    box-shadow: 0px -10px  #302b63;
+}
+.list:nth-child(1).active ~ .idetuficator{
+    transform: translateX(calc(70px*0));
+}
+.list:nth-child(2).active ~ .idetuficator{
+    transform: translateX(calc(70px*1));
+}
+.list:nth-child(3).active ~ .idetuficator{
+    transform: translateX(calc(70px*2));
+}
+.list:nth-child(4).active ~ .idetuficator{
+    transform: translateX(calc(70px*3));
+}
+.list:nth-child(5).active ~ .idetuficator{
+    transform: translateX(calc(70px*4));
+}
+/*-------------------Логотип------------*/
+.logo {
+    font-size: 100px;
+    color: orange;
+    text-shadow: 0 0 10px #befffa;
+    transition: all 1s ease;
+    animation: animat 4s linear infinite;
+    display: flex;
+}
+@keyframes animat{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/*============Головна =========*/
+.golovna{
+    background: url(golovna_js.jpg);
+    background-size: cover;
+    min-height: 82.4vh;
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+.fon-golovna{
+    background: linear-gradient(100deg,#0f0c29,#302b63,#24243e);
+    min-height: 82.4vh;
+    opacity: 0.9;
+    position: relative;
+}
+.fon-golovna h1{
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: orange;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+}
+.fon-golovna h2{
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(199, 131, 5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 70px 0;
+}
+.fon-golovna span{
+    color: orange;
+    font-size: 200px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.dali{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 300px;
+    left: 40%;
+    transition: all 2s ease;
+    border: 3px ridge black;
+    box-shadow: 0 0 20px black;
+}
+.dali:hover{
+    background: linear-gradient(170deg,#fffc00,#ffffff);
+    top: 2px;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: all 1s ease;
+}
+.dali a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #020107;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 1s ease;
+}
+/*===============================================*/
+.two{
+    background-color: #0f0c29;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
